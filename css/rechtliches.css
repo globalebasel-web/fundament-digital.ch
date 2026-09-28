@@ -1,0 +1,196 @@
+/* Layout für Impressum und Datenschutzerklärung.
+   Nutzt die Farbvariablen und Grundstile aus site.css. */
+
+.legal-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(245, 247, 248, 0.9);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+}
+
+.legal-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 72px;
+  padding-inline: var(--gutter);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.logo svg {
+  width: 28px;
+  height: 28px;
+  flex: none;
+  fill: currentColor;
+}
+
+.logo-word {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  font-family: Archivo, sans-serif;
+}
+
+.logo-word b {
+  font-weight: 900;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+}
+
+.logo-word span {
+  font-weight: 500;
+  font-size: 0.52rem;
+  letter-spacing: 0.38em;
+  color: var(--ink-3);
+  margin-top: 3px;
+}
+
+.back {
+  font-family: IBM Plex Mono, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.back:hover {
+  color: var(--ink);
+}
+
+.legal {
+  max-width: calc(72ch + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 72px var(--gutter) 104px;
+}
+
+.legal h1 {
+  margin: 18px 0 0;
+  font-family: Archivo, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.6rem, 7vw, 3.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.032em;
+  color: var(--ink);
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.legal h2 {
+  margin: 52px 0 0;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  font-family: Archivo, sans-serif;
+  font-weight: 800;
+  font-size: 1.28rem;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.legal h3 {
+  margin: 30px 0 0;
+  font-family: Archivo, sans-serif;
+  font-weight: 700;
+  font-size: 1.04rem;
+  color: var(--ink);
+}
+
+.legal p,
+.legal ul,
+.legal address {
+  margin: 14px 0 0;
+  color: var(--ink-2);
+}
+
+.legal address {
+  font-style: normal;
+}
+
+.legal ul {
+  padding-left: 1.25em;
+  list-style: disc;
+}
+
+.legal li + li {
+  margin-top: 6px;
+}
+
+.legal a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.legal strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.legal .stand {
+  margin-top: 20px;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+}
+
+.legal .lead {
+  font-size: 1.1rem;
+}
+
+/* Gelb markierte Stellen müssen vor dem Livegang ausgefüllt werden. */
+.legal mark {
+  background: #fff1a8;
+  color: var(--ink);
+  padding: 0 4px;
+}
+
+.legal-footer {
+  border-top: 1px solid var(--line);
+}
+
+.legal-footer .inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+  padding: 26px var(--gutter);
+  font-family: IBM Plex Mono, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+}
+
+.legal-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+}
+
+.legal-footer nav a {
+  color: var(--ink-2);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.72rem;
+}
+
+.legal-footer nav a:hover,
+.legal-footer nav a[aria-current="page"] {
+  color: var(--ink);
+}
