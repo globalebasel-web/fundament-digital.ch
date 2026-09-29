@@ -148,3 +148,9 @@ a:hover .owave--still .ow-back { animation-play-state: running; }
 
 /* Hero: großes Zeichen etwas zurückhaltender als das frühere 3D-Logo */
 #spline-slot { opacity: .13; }
+
+/* Handy: schmale Bildausschnitte statt der breiten Fotos (spart Daten, gleicher Bildinhalt) */
+@media (max-width: 700px) {
+  .hero-photo { background-image: url(../img/hero-m.webp) !important; }
+  .work-photo { background-image: url(../img/arbeitsweise-m.webp) !important; }
+}
