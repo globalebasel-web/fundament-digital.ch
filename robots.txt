@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oberrhein-digital.ch/sitemap.xml
